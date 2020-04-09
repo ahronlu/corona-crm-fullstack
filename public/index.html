@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/f1eb5cf7f9.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <title>Corona CRM</title>
+  </head>
+  <body>
+    <nav class="nav-wrapper green">
+      <div class="container">
+        <a href="#" class="brand-logo" float="left">Corona CRM</a>
+      </div>
+    </nav>
+    <main>
+      <div class="row">
+        <div class="col s2">
+          <h5><i class="fa fa-user-plus"></i> Create new customer</h5>
+          <form id="new-customer-form">
+            <div class="input-field inline">
+              <input name="fullName" placeholder="Enter name" />
+            </div>
+            <div class="input-field inline">
+              <input name="email" placeholder="Enter email" />
+            </div>
+            <div class="input-field inline">
+              <input name="birthDate" type="date" placeholder="Birthdate" />
+            </div>
+            <div class="input-field inline">
+              <textarea
+                class="materialize-textarea"
+                name="notes"
+                placeholder="Enter your notes..."
+              ></textarea>
+              <lable for="notes">Notes</lable>
+            </div>
+            <button
+              class="btn waves-effect waves-light green"
+              type="submit"
+              name="action"
+              id="submit-btn"
+            >
+              Create
+            </button>
+          </form>
+        </div>
+        <div class="col s9">
+          <table class="highlight" id="customers-list">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Full name</th>
+                <th>Email address</th>
+                <th>Birth Date</th>
+                <th>Created on</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="customer-list"></tbody>
+          </table>
+        </div>
+      </div>
+    </main>
+    <div id="edit-backdrop">
+      <div class="edit-div">
+        <form id="edit-customer-form">
+          <div class="input-field inline">
+            <input name="fullName" placeholder="Enter name" />
+          </div>
+          <div class="input-field inline">
+            <input name="email" placeholder="Enter email" />
+          </div>
+          <div class="input-field inline">
+            <input name="birthDate" type="date" />
+          </div>
+          <div class="input-field inline">
+            <textarea
+              class="materialize-textarea"
+              name="notes"
+              placeholder="Enter your notes..."
+            ></textarea>
+          </div>
+          <button
+            class="btn waves-effect waves-light green"
+            type="submit"
+            name="action"
+            id="edit-submit-btn"
+          >
+            Update
+          </button>
+        </form>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
